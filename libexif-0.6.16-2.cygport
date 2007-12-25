@@ -1,0 +1,20 @@
+DESCRIPTION="EXIF parser library"
+HOMEPAGE="http://libexif.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+PATCH_URI="
+	mirror://portage/media-libs/${PN}/files/${PN}-0.6.13-pkgconfig.patch
+	mirror://portage/media-libs/${PN}/files/${PN}-CVE-2007-6351.patch
+	mirror://portage/media-libs/${PN}/files/${PN}-CVE-2007-6352.patch
+"
+
+api=12
+PKG_NAMES="${PN} ${PN}${api} ${PN}-devel"
+PKG_HINTS="setup dll devel"
+PKG_CONTENTS[0]='usr/share/doc/'
+PKG_CONTENTS[1]="usr/bin/cygexif-${api}.dll usr/share/locale/"
+PKG_CONTENTS[2]='usr/include/ usr/lib/'
+
+DIFF_EXCLUDES="auto-m4 intl"
+
+CYGCONF_ARGS="--with-doc-dir=/usr/share/doc/${P}"
+
