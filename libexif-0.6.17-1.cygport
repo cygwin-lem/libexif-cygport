@@ -3,16 +3,14 @@ HOMEPAGE="http://libexif.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 PATCH_URI="
 	mirror://portage/media-libs/${PN}/files/${PN}-0.6.13-pkgconfig.patch
-	mirror://portage/media-libs/${PN}/files/${PN}-CVE-2007-6351.patch
-	mirror://portage/media-libs/${PN}/files/${PN}-CVE-2007-6352.patch
 "
 
-api=12
-PKG_NAMES="${PN} ${PN}${api} ${PN}-devel"
+PKG_NAMES="${PN} ${PN}12 ${PN}-devel"
 PKG_HINTS="setup dll devel"
-PKG_CONTENTS[0]='usr/share/doc/'
-PKG_CONTENTS[1]="usr/bin/cygexif-${api}.dll usr/share/locale/"
-PKG_CONTENTS[2]='usr/include/ usr/lib/'
+libexif_CONTENTS=	# empty
+libexif12_CONTENTS="--exclude=libexif-api.html usr/bin/cygexif-12.dll
+                    usr/share/doc/ usr/share/locale/"
+libexif_devel_CONTENTS="usr/include/ usr/lib/ usr/share/doc/${P}/libexif-api.html/"
 
 DIFF_EXCLUDES="auto-m4 intl"
 
