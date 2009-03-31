@@ -5,19 +5,20 @@ addition, it has gettext support. All EXIF tags described in EXIF
 standard 2.1 are supported.
 
 Runtime requirements:
-  cygwin-1.5.25-15
-  libintl8-0.17-2
+  cygwin-1.7.0-44
+  libgcc1-4.3.2-2
+  libintl8-0.17-10
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.63-1
-  automake1.10-1.10.10-1
+  autoconf2.5-2.63-10
+  automake1.10-1.10.1-10
   binutils-20080624-2
-  cygport-0.4.2-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  libtool-2.2.6a-1
-  make-3.81-1
+  cygport-0.9.6-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  libtool-2.2.7a-11
+  make-3.81-2
   sed-4.1.5-2
 
 Canonical website:
@@ -46,13 +47,11 @@ Files included in the binary packages:
 
 (libexif12)
   /usr/bin/cygexif-12.dll
-  /usr/share/doc/libexif-0.6.17/ABOUT-NLS
-  /usr/share/doc/libexif-0.6.17/AUTHORS
-  /usr/share/doc/libexif-0.6.17/COPYING
-  /usr/share/doc/libexif-0.6.17/ChangeLog
-  /usr/share/doc/libexif-0.6.17/INSTALL
-  /usr/share/doc/libexif-0.6.17/NEWS
-  /usr/share/doc/libexif-0.6.17/README
+  /usr/share/doc/libexif/AUTHORS
+  /usr/share/doc/libexif/COPYING
+  /usr/share/doc/libexif/ChangeLog
+  /usr/share/doc/libexif/NEWS
+  /usr/share/doc/libexif/README
   /usr/share/locale/cs/LC_MESSAGES/libexif-12.mo
   /usr/share/locale/de/LC_MESSAGES/libexif-12.mo
   /usr/share/locale/en_CA/LC_MESSAGES/libexif-12.mo
@@ -84,92 +83,80 @@ Files included in the binary packages:
   /usr/lib/libexif.dll.a
   /usr/lib/libexif.la
   /usr/lib/pkgconfig/libexif.pc
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/__stdint_8h-source.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/annotated.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/bug.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/classes.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/deprecated.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/dir_cf62282fe5e6b2bf7c0aec6760c64e09.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/dir_cf62282fe5e6b2bf7c0aec6760c64e09_dep.map
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/dir_cf62282fe5e6b2bf7c0aec6760c64e09_dep.png
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/dirs.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/doxygen.css
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/doxygen.png
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/exif-byte-order_8h-source.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/exif-content_8h-source.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/exif-data-type_8h-source.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/exif-data_8h-source.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/exif-data_8h.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/exif-entry_8h-source.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/exif-entry_8h.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/exif-format_8h-source.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/exif-ifd_8h-source.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/exif-loader_8h-source.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/exif-loader_8h.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/exif-log_8h-source.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/exif-log_8h.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/exif-mem_8h-source.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/exif-mem_8h.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/exif-mnote-data-priv_8h-source.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/exif-mnote-data_8h-source.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/exif-system_8h-source.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/exif-system_8h.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/exif-tag_8h-source.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/exif-utils_8h-source.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/files.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/ftv2blank.png
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/ftv2doc.png
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/ftv2folderclosed.png
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/ftv2folderopen.png
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/ftv2lastnode.png
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/ftv2link.png
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/ftv2mlastnode.png
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/ftv2mnode.png
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/ftv2node.png
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/ftv2plastnode.png
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/ftv2pnode.png
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/ftv2vertline.png
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/globals.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/globals_defs.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/globals_func.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/globals_type.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/graph_legend.dot
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/graph_legend.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/graph_legend.png
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/i18n_8h-source.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/index.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/main.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/pages.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/structExifRational.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/structExifSRational.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/struct__ExifEntry.html
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/struct__ExifEntry__coll__graph.map
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/struct__ExifEntry__coll__graph.md5
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/struct__ExifEntry__coll__graph.png
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/tab_b.gif
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/tab_l.gif
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/tab_r.gif
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/tabs.css
-  /usr/share/doc/libexif-0.6.17/libexif-api.html/tree.html
+  /usr/share/doc/libexif/libexif-api.html/__stdint_8h-source.html
+  /usr/share/doc/libexif/libexif-api.html/annotated.html
+  /usr/share/doc/libexif/libexif-api.html/bug.html
+  /usr/share/doc/libexif/libexif-api.html/classes.html
+  /usr/share/doc/libexif/libexif-api.html/deprecated.html
+  /usr/share/doc/libexif/libexif-api.html/dir_cf62282fe5e6b2bf7c0aec6760c64e09.html
+  /usr/share/doc/libexif/libexif-api.html/dir_cf62282fe5e6b2bf7c0aec6760c64e09_dep.map
+  /usr/share/doc/libexif/libexif-api.html/dir_cf62282fe5e6b2bf7c0aec6760c64e09_dep.png
+  /usr/share/doc/libexif/libexif-api.html/dirs.html
+  /usr/share/doc/libexif/libexif-api.html/doxygen.css
+  /usr/share/doc/libexif/libexif-api.html/doxygen.png
+  /usr/share/doc/libexif/libexif-api.html/exif-byte-order_8h-source.html
+  /usr/share/doc/libexif/libexif-api.html/exif-content_8h-source.html
+  /usr/share/doc/libexif/libexif-api.html/exif-data-type_8h-source.html
+  /usr/share/doc/libexif/libexif-api.html/exif-data_8h-source.html
+  /usr/share/doc/libexif/libexif-api.html/exif-data_8h.html
+  /usr/share/doc/libexif/libexif-api.html/exif-entry_8h-source.html
+  /usr/share/doc/libexif/libexif-api.html/exif-entry_8h.html
+  /usr/share/doc/libexif/libexif-api.html/exif-format_8h-source.html
+  /usr/share/doc/libexif/libexif-api.html/exif-ifd_8h-source.html
+  /usr/share/doc/libexif/libexif-api.html/exif-loader_8h-source.html
+  /usr/share/doc/libexif/libexif-api.html/exif-loader_8h.html
+  /usr/share/doc/libexif/libexif-api.html/exif-log_8h-source.html
+  /usr/share/doc/libexif/libexif-api.html/exif-log_8h.html
+  /usr/share/doc/libexif/libexif-api.html/exif-mem_8h-source.html
+  /usr/share/doc/libexif/libexif-api.html/exif-mem_8h.html
+  /usr/share/doc/libexif/libexif-api.html/exif-mnote-data-priv_8h-source.html
+  /usr/share/doc/libexif/libexif-api.html/exif-mnote-data_8h-source.html
+  /usr/share/doc/libexif/libexif-api.html/exif-system_8h-source.html
+  /usr/share/doc/libexif/libexif-api.html/exif-system_8h.html
+  /usr/share/doc/libexif/libexif-api.html/exif-tag_8h-source.html
+  /usr/share/doc/libexif/libexif-api.html/exif-utils_8h-source.html
+  /usr/share/doc/libexif/libexif-api.html/files.html
+  /usr/share/doc/libexif/libexif-api.html/ftv2blank.png
+  /usr/share/doc/libexif/libexif-api.html/ftv2doc.png
+  /usr/share/doc/libexif/libexif-api.html/ftv2folderclosed.png
+  /usr/share/doc/libexif/libexif-api.html/ftv2folderopen.png
+  /usr/share/doc/libexif/libexif-api.html/ftv2lastnode.png
+  /usr/share/doc/libexif/libexif-api.html/ftv2link.png
+  /usr/share/doc/libexif/libexif-api.html/ftv2mlastnode.png
+  /usr/share/doc/libexif/libexif-api.html/ftv2mnode.png
+  /usr/share/doc/libexif/libexif-api.html/ftv2node.png
+  /usr/share/doc/libexif/libexif-api.html/ftv2plastnode.png
+  /usr/share/doc/libexif/libexif-api.html/ftv2pnode.png
+  /usr/share/doc/libexif/libexif-api.html/ftv2vertline.png
+  /usr/share/doc/libexif/libexif-api.html/globals.html
+  /usr/share/doc/libexif/libexif-api.html/globals_defs.html
+  /usr/share/doc/libexif/libexif-api.html/globals_func.html
+  /usr/share/doc/libexif/libexif-api.html/globals_type.html
+  /usr/share/doc/libexif/libexif-api.html/graph_legend.dot
+  /usr/share/doc/libexif/libexif-api.html/graph_legend.html
+  /usr/share/doc/libexif/libexif-api.html/graph_legend.png
+  /usr/share/doc/libexif/libexif-api.html/i18n_8h-source.html
+  /usr/share/doc/libexif/libexif-api.html/index.html
+  /usr/share/doc/libexif/libexif-api.html/main.html
+  /usr/share/doc/libexif/libexif-api.html/pages.html
+  /usr/share/doc/libexif/libexif-api.html/structExifRational.html
+  /usr/share/doc/libexif/libexif-api.html/structExifSRational.html
+  /usr/share/doc/libexif/libexif-api.html/struct__ExifEntry.html
+  /usr/share/doc/libexif/libexif-api.html/struct__ExifEntry__coll__graph.map
+  /usr/share/doc/libexif/libexif-api.html/struct__ExifEntry__coll__graph.md5
+  /usr/share/doc/libexif/libexif-api.html/struct__ExifEntry__coll__graph.png
+  /usr/share/doc/libexif/libexif-api.html/tab_b.gif
+  /usr/share/doc/libexif/libexif-api.html/tab_l.gif
+  /usr/share/doc/libexif/libexif-api.html/tab_r.gif
+  /usr/share/doc/libexif/libexif-api.html/tabs.css
+  /usr/share/doc/libexif/libexif-api.html/tree.html
 
 ------------------
 
 Port Notes:
 
------ version 0.6.17-1 -----
-Version bump.
-
------ version 0.6.16-2 -----
-Rebuilt with Gentoo Security patches for CVE-2007-6351,-6352.
-
------ version 0.6.16-1 -----
-Version bump.
-
------ version 0.6.15-1 -----
-Version bump.
-
------ version 0.6.13-1 -----
-Version bump.
+----- version 0.6.17-10 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:
