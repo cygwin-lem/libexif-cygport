@@ -5,14 +5,9 @@ PATCH_URI="
 	mirror://portage/media-libs/${PN}/files/${PN}-0.6.13-pkgconfig.patch
 "
 
-PKG_NAMES="${PN} ${PN}12 ${PN}-devel"
-PKG_HINTS="setup dll devel"
-libexif_CONTENTS=	# empty
+PKG_NAMES="${PN}12 ${PN}-devel"
 libexif12_CONTENTS="--exclude=libexif-api.html usr/bin/cygexif-12.dll
                     usr/share/doc/ usr/share/locale/"
-libexif_devel_CONTENTS="usr/include/ usr/lib/ usr/share/doc/${P}/libexif-api.html/"
+libexif_devel_CONTENTS="usr/include/ usr/lib/ usr/share/doc/${PN}/libexif-api.html/"
 
-DIFF_EXCLUDES="auto-m4 intl"
-
-CYGCONF_ARGS="--with-doc-dir=/usr/share/doc/${P}"
-
+CYGCONF_ARGS="--with-doc-dir=/usr/share/doc/${PN}"
