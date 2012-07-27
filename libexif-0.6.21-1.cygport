@@ -1,0 +1,19 @@
+CATEGORY="Graphics"
+SUMMARY="EXIF parser library"
+DESCRIPTION="libexif is a library for parsing, editing, and saving EXIF data.
+In addition, it has gettext support. All EXIF tags described in EXIF
+standard 2.1 are supported."
+HOMEPAGE="http://libexif.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+PATCH_URI="mirror://portage/media-libs/${PN}/files/${PN}-0.6.13-pkgconfig.patch"
+
+PKG_NAMES="${PN}12 ${PN}-devel"
+libexif12_SUMMARY="${SUMMARY} (runtime)"
+libexif12_CONTENTS="--exclude=libexif-api.html usr/bin/cygexif-12.dll
+                    usr/share/doc/ usr/share/locale/"
+libexif_devel_SUMMARY="${SUMMARY} (development)"
+libexif_devel_CONTENTS="usr/include/ usr/lib/ usr/share/doc/${PN}/libexif-api.html/"
+
+CYGCONF_ARGS="--with-doc-dir=/usr/share/doc/${PN}"
+
+KEEP_LA_FILES="none"

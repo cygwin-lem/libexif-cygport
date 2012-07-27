@@ -1,7 +1,0 @@
-category: Graphics
-requires: gettext libexif12
-external-source: libexif
-sdesc: "EXIF parser library (development)"
-ldesc: "libexif is a library for parsing, editing, and saving EXIF data. 
-In addition, it has gettext support. All EXIF tags described in EXIF 
-standard 2.1 are supported."
