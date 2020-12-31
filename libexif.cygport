@@ -1,26 +1,79 @@
 NAME="libexif"
-VERSION=0.6.21
-RELEASE=3
+VERSION=0.6.22
+RELEASE=1
 CATEGORY="Graphics"
 SUMMARY="EXIF parser library"
 DESCRIPTION="libexif is a library for parsing, editing, and saving EXIF data.
 In addition, it has gettext support. All EXIF tags described in EXIF standard
 2.1 are supported."
-HOMEPAGE="http://libexif.sourceforge.net/"
-SRC_URI="mirror://sourceforge/libexif/libexif-${VERSION}.tar.bz2"
-PATCH_URI="
-	mirror://portage/media-libs/libexif/files/libexif-0.6.13-pkgconfig.patch
-	https://github.com/libexif/libexif/commit/41bd04234b104312f54d25822f68738ba8d7133d.patch#/libexif-0.6.21-CVE-2016-6328.patch
+HOMEPAGE="https://libexif.github.io/"
+
+
+################################
+## Source from a git repository
+################################
+GIT_REPO="https://github.com/libexif/libexif"
+declare -A GIT_DATEHASH_BY_NAME=(
+  # git log --date=iso-strict --format='%cd/%H' -1
+  [0.6.22]=2020-05-18T17:58:47+02:00/3cc7842ca200a4da4bd65850e3c20d5a1811afa7
+)
+REV_HASH="${GIT_DATEHASH_BY_NAME[${VERSION}]#*/}"
+REV_DATE="${GIT_DATEHASH_BY_NAME[${VERSION}]%/*}"
+REV_DATE_SHORT="${GIT_DATEHASH_BY_NAME[${VERSION}]%T*}"
+GIT_BASENAME="${GIT_REPO##*/}"
+SRC_URI="${GIT_REPO}/archive/${REV_HASH}.tar.gz"   # GitHub
+#SRC_URI="${GIT_REPO}/-/archive/${REV_HASH}/${GIT_BASENAME}-${REV_HASH}.tar.bz2" # GitLab
+SRC_DIR="${GIT_BASENAME}-${REV_HASH}"
+
+################################
+## Patch files
+################################
+# Patch filenames are in a default style of 'git format-patch'
+PATCH_URI=$(\
+  find -maxdepth 1 -type f -name '[0-9][0-9][0-9][0-9]-*.patch' \
+  | sort \
+)
+# Additional patches, if any
+PATCH_URI+="
 "
 
-PKG_NAMES="libexif12 libexif-common libexif-devel"
-libexif12_SUMMARY="${SUMMARY} (runtime)"
-libexif12_REQUIRES="libexif-common"
+################################
+## Requirements for building
+################################
+BUILD_REQUIRES="\
+  pkg-config\
+  doxygen\
+  gettext-devel\
+  libintl-devel\
+"
+
+################################
+## Configuration for building
+################################
+CYGCONF_ARGS="--with-doc-dir=/usr/share/doc/${NAME}"
+DIFF_EXCLUDES="po"
+
+################################
+## ABI
+################################
 # l10n message domain is ABI-versioned
-libexif12_CONTENTS="usr/bin/cygexif-12.dll usr/share/locale/"
-libexif_common_SUMMARY="${SUMMARY} (runtime data)"
+ABI=12
+
+################################
+## Packages
+################################
+PKG_NAMES="libexif${ABI} libexif-common libexif-devel"
+
+printf -v "libexif${ABI}_SUMMARY"  "%s" "${SUMMARY} (runtime)"
+printf -v "libexif${ABI}_CONTENTS" "%s" "usr/bin/cygexif-${ABI}.dll usr/share/locale/"
+
+libexif_common_SUMMARY="${SUMMARY} (general doc)"
 libexif_common_CONTENTS="--exclude=libexif-api.html usr/share/doc/"
+# Removed the requirement below
+# ( cf. https://cygwin.com/pipermail/cygwin-apps/2020-December/040889.html )
+# printf -v "libexif${ABI}_REQUIRES" "%s" "libexif-common"
+
 libexif_devel_SUMMARY="${SUMMARY} (development)"
 libexif_devel_CONTENTS="usr/include/ usr/lib/ usr/share/doc/${PN}/libexif-api.html/"
 
-CYGCONF_ARGS="--with-doc-dir=/usr/share/doc/${NAME}"
+################################
