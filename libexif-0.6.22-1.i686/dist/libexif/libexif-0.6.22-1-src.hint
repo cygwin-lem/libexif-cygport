@@ -1,0 +1,9 @@
+category: Graphics
+build-depends: cygport   pkg-config  doxygen  gettext-devel  libintl-devel
+sdesc: "EXIF parser library"
+ldesc: "libexif is a library for parsing, editing, and saving EXIF data.
+In addition, it has gettext support. All EXIF tags described in EXIF standard
+2.1 are supported."
+skip:
+test:
+homepage: https://libexif.github.io/
