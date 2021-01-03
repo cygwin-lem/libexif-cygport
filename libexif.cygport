@@ -62,18 +62,34 @@ ABI=12
 ################################
 ## Packages
 ################################
-PKG_NAMES="libexif${ABI} libexif-common libexif-devel"
+PKG_NAMES="libexif${ABI} libexif-doc libexif-devel"
 
 printf -v "libexif${ABI}_SUMMARY"  "%s" "${SUMMARY} (runtime)"
-printf -v "libexif${ABI}_CONTENTS" "%s" "usr/bin/cygexif-${ABI}.dll usr/share/locale/"
+printf -v "libexif${ABI}_CONTENTS" "%s" "\
+  usr/bin/cygexif-${ABI}.dll \
+  usr/share/locale/ \
+"
 
-libexif_common_SUMMARY="${SUMMARY} (general doc)"
-libexif_common_CONTENTS="--exclude=libexif-api.html usr/share/doc/"
-# Removed the requirement below
-# ( cf. https://cygwin.com/pipermail/cygwin-apps/2020-December/040889.html )
-# printf -v "libexif${ABI}_REQUIRES" "%s" "libexif-common"
+libexif_doc_SUMMARY="${SUMMARY} (doc)"
+libexif_doc_CONTENTS="\
+  usr/share/doc/ \
+"
+libexif_doc_OBSOLETES="libexif-common"
 
 libexif_devel_SUMMARY="${SUMMARY} (development)"
-libexif_devel_CONTENTS="usr/include/ usr/lib/ usr/share/doc/${PN}/libexif-api.html/"
+libexif_devel_CONTENTS="\
+  usr/include/ \
+  usr/lib/ \
+"
 
 ################################
+
+# After libexif-0.6.22-1
+#   Rearranged packaging of document files,
+#   and libexif-doc obsoletes libexif-common
+#     https://cygwin.com/pipermail/cygwin-apps/2021-January/040900.html
+
+# libexif-0.6.22-1
+#   Removed the requirement of libexif-common from libexif12
+#     https://cygwin.com/pipermail/cygwin-apps/2020-December/040889.html
+# # printf -v "libexif${ABI}_REQUIRES" "%s" "libexif-common"
