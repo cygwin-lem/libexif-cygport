@@ -1,5 +1,5 @@
 NAME="libexif"
-VERSION=0.6.23
+VERSION=0.6.24
 RELEASE=1
 CATEGORY="Graphics"
 SUMMARY="EXIF parser library"
@@ -15,6 +15,7 @@ HOMEPAGE="https://libexif.github.io/"
 GIT_REPO="https://github.com/libexif/libexif"
 declare -A GIT_DATEHASH_BY_NAME=(
   # git log --date=iso-strict --format='%cd/%H' -1
+  [0.6.24]=2021-11-25T11:29:16+01:00/v0.6.24
   [0.6.23]=2021-09-12T15:23:26+02:00/v0.6.23
   [0.6.22]=2020-05-18T17:58:47+02:00/3cc7842ca200a4da4bd65850e3c20d5a1811afa7
 )
@@ -22,7 +23,7 @@ REV_HASH="${GIT_DATEHASH_BY_NAME[${VERSION}]#*/}"
 REV_DATE="${GIT_DATEHASH_BY_NAME[${VERSION}]%/*}"
 REV_DATE_SHORT="${GIT_DATEHASH_BY_NAME[${VERSION}]%T*}"
 GIT_BASENAME="${GIT_REPO##*/}"
-SRC_URI="${GIT_REPO}/archive/${REV_HASH}/${GIT_BASENAME}-${VERSION}.tar.gz" # GitHub
+SRC_URI="${GIT_REPO}/archive/${REV_HASH}.tar.gz" # GitHub
 #SRC_URI="${GIT_REPO}/-/archive/${REV_HASH}/${GIT_BASENAME}-${REV_HASH}.tar.bz2" # GitLab
 SRC_DIR="${GIT_BASENAME}-${REV_HASH#v}"
 
