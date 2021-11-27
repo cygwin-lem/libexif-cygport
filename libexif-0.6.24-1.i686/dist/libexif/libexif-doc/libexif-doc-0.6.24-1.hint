@@ -1,0 +1,9 @@
+category: Graphics
+requires:  
+sdesc: "EXIF parser library (doc)"
+ldesc: "libexif is a library for parsing, editing, and saving EXIF data.
+In addition, it has gettext support. All EXIF tags described in EXIF standard
+2.1 are supported."
+obsoletes: libexif-common
+external-source: libexif
+
